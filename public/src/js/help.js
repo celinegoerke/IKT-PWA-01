@@ -13,23 +13,3 @@ function closeNav() {
     document.body.style.backgroundColor = "white";
 
 }
-function openForm(){
-    var s = document.getElementById('test1');
-    if (s.classList.contains('hide')) {
-        s.classList.remove("hide");
-        s.classList.add("show");
-    } else {
-        s.classList.remove("show");
-        s.classList.add("hide");
-    }
-    var x = document.getElementById('test2');
-    if (x.classList.contains('hide')) {
-        x.classList.remove("hide");
-        x.classList.add("show");
-    } else {
-        x.classList.remove("show");
-        x.classList.add("hide");
-    }
-
-
-}
