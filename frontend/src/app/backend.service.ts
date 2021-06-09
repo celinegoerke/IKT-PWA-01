@@ -1,6 +1,7 @@
 
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import {Observable} from "rxjs";
 
 export interface Post {
   id: number;
@@ -27,5 +28,9 @@ export class BackendService {
         }),
       })
       .toPromise();
+  }
+
+  getPost(): Observable<any>{
+    return this.http.get(this.apiUrl)
   }
 }

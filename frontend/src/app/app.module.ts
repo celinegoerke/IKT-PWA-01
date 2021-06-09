@@ -17,12 +17,14 @@ import { MatInputModule } from '@angular/material/input';
 import { CreateComponent } from './create/create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ShowDbPicsComponent } from './show-db-pics/show-db-pics.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    CreateComponent
+    CreateComponent,
+    ShowDbPicsComponent
   ],
   imports: [
     BrowserModule,

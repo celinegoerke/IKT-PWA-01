@@ -1,0 +1,8 @@
+<p>show-db-pics works!</p>
+<div class="form-group">
+  <button type="button" (click)="getPosts()">Get Posts</button>
+</div>
+<div *ngIf="loading">loading...</div>
+
+<p id="test">{{response}}</p>
+<img id="image" [src]="imagePath">
