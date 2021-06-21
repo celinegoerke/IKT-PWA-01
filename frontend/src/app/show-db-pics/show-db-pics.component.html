@@ -1,8 +1,16 @@
-<p>show-db-pics works!</p>
-<div class="form-group">
-  <button type="button" (click)="getPosts()">Get Posts</button>
-</div>
-<div *ngIf="loading">loading...</div>
 
-<p id="test">{{response}}</p>
-<img id="image" [src]="imagePath">
+<div class="container" novalidate>
+  <div *ngFor="let post of allPosts">
+    <mat-card class="polaroid">
+      <mat-card-header>
+        <mat-card-title>{{post.title}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image [src]=imageSrc(post.image) alt="Foto">
+      <mat-card-content>
+        <p>
+          {{post.location}}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

@@ -30,7 +30,15 @@ export class BackendService {
       .toPromise();
   }
 
-  getPost(): Observable<any>{
-    return this.http.get(this.apiUrl)
+  public readAll(): Promise<Post[]> {
+    return this.http
+      .get<Post[]>(`${this.apiUrl}`, {
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json',
+          'Accept-Type': 'application/json'
+        }),
+      })
+      .toPromise();
   }
+
 }

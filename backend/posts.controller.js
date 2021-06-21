@@ -1,3 +1,4 @@
+
 import { PostService } from './db.sqlqueries.js';
 
 export const PostController = {
@@ -8,7 +9,20 @@ export const PostController = {
                 res.status(500).send({
                     message: err.message || "Some error occurred while getting all posts",
                 });
-            else res.json(result);
+            else {
+                console.log(result);
+
+                let arr = [];
+                result.forEach( post => {
+                    let buff = new Buffer(post.image, 'base64');
+                    let text = buff.toString('ascii');
+                    //console.log(text);
+                    post.image = text;
+                    arr.push(post);
+                });
+
+                res.json(arr);
+            }
         });
     },
 

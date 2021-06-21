@@ -18,6 +18,7 @@ import { CreateComponent } from './create/create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ShowDbPicsComponent } from './show-db-pics/show-db-pics.component';
+import { MatCardModule } from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ShowDbPicsComponent } from './show-db-pics/show-db-pics.component';
     MatIconModule,
     MatListModule,
     MatFormFieldModule,
+    MatCardModule,
     MatInputModule,
     FormsModule,
     ReactiveFormsModule
